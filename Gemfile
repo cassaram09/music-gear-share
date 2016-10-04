@@ -29,6 +29,10 @@ gem 'devise'
 
 gem 'pundit'
 
+gem 'capybara'
+
+gem 'factory_girl'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
