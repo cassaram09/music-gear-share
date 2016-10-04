@@ -29,6 +29,10 @@ gem 'devise'
 
 gem 'pundit'
 
+gem 'capybara'
+
+gem 'factory_girl'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -41,6 +45,7 @@ gem 'pundit'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'rspec-rails', '~> 3.5'
 end
 
 group :development do
@@ -49,6 +54,10 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
+
+group :test do
+  gem 'database_cleaner'
 end
 
 gem 'rails_12factor', group: :production
