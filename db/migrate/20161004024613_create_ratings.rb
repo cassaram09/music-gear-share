@@ -5,6 +5,8 @@ class CreateRatings < ActiveRecord::Migration
       t.timestamps null: false
       t.integer :rating
       t.string :notes
+      t.integer "reviewer_id"
+      t.integer "reviewee_id"
     end
   end
 end
