@@ -37,6 +37,9 @@ Lease
   return: date
   notes: string
 
+UserLease
+  join table between users and leases
+
 UserRatings
   belongs_to User
   belongs_to Rating
