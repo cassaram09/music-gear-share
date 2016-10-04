@@ -3,7 +3,7 @@ class CreateGears < ActiveRecord::Migration
     create_table :gears do |t|
 
       t.timestamps null: false
-      t.string :type
+      t.string :gear_type
       t.integer :quantity
       t.string :condition
       t.string :year
