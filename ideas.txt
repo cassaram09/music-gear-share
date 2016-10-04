@@ -1,0 +1,93 @@
+User
+  - can own/lease (own) and rent (renter)
+  - can give and receive ratings
+
+
+User 
+  has_many gears
+  
+  # is both a renter and a host
+
+  # has_many :user_rentals, foreign_key "rental_id"
+  # has_many :rentals, foreign_key: "user_id"
+  # has_many :rental_agreements, through: :user_rentals
+
+Gear
+  belongs_to User
+  belongs_to a lease
+  type: string
+  quantity: integer
+  condition: good
+  year: int
+  value: int
+  rules: string
+  notes: sting
+
+Rating
+  belongs_to User
+  value: integer
+  review: string
+
+Lease
+  belongs_to a renter
+  belongs_to a owner
+  has_many gears
+
+  checkout: date
+  return: date
+  notes: string
+
+UserRatings
+  belongs_to User
+  belongs_to Rating
+
+  reviewer_id: int
+  reviewee_id: int
+
+class Rating < ActiveRecord::Base
+  belongs_to :user, class_name: "Owner"
+  has_one :user, class_name: "RatedUser"
+
+end
+
+
+has_many :user_projects, foreign_key: "collaborator_id"
+  has_many :projects, foreign_key: "owner_id"
+  has_many :collaboration_projects, through: :user_projects
+
+  has_many :assigned_tasks, through: :user_tasks
+  has_many :user_tasks, foreign_key: "assigned_user_id"
+  has_many :tasks, foreign_key: "owner_id"
+
+
+
+Must use an Angular Front-End that includes at least 5 pages
+  - music gear rental? (like toro, except for gear)
+    - home and signup
+    - profile 
+     - ratings
+    - gear index
+    - create view
+    - gear show/edit/update view
+    - book gear view?
+
+Must contain some sort of nested views
+- use ui router and nested routes
+ - nested comments / ratings on user profile page
+
+
+Must contain some sort of searching as well as filtering based on some criteria. Ex: All items in the "fruit" category, or all tasks past due
+ - use to filter gear by type (guitar, bass, drums, cases, picks, sticks, etc.)
+
+Must contain at least one page that allows for dynamic updating of a single field of a resource. Ex: Allow changing of quantity in a shopping cart
+ - user can update their list of gear
+ - usr can select what day they want to rent a piece of gear, making it unavailable to other for rental
+
+Links should work correctly. Ex: Clicking on a product in a list, should take you to the show page for that product
+- duh
+
+Data should be validated in Angular before submission
+- use form validations
+
+Must talk to the Rails backend using $http and Services.
+- backend will use APIs and active_model serializer
