@@ -7,6 +7,8 @@ class CreateLeases < ActiveRecord::Migration
       t.date :checkin
       t.boolean :returned
       t.string :notes
+      t.integer "owner_id"
+      t.integer "renter_id"
 
     end
   end
