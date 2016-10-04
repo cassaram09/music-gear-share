@@ -3,7 +3,7 @@ require "rails_helper"
 DatabaseCleaner.strategy = :truncation
 
 RSpec.describe "User", :type => :model do
-
+  
   DatabaseCleaner.clean
 
   user = User.create!(name: "john Smith", email: "john@john.com", password: "hello123")
