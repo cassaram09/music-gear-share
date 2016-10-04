@@ -1,4 +1,4 @@
-namespace :spec do
+namespace :rspec do
     
   require 'rake'
   require 'rspec/core/rake_task'
@@ -9,6 +9,6 @@ namespace :spec do
   # t.rspec_opts << ' more options'
   # t.rcov = true
   end
-  task :pretty => :spec
+  task :full => :spec
 
 end
