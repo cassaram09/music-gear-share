@@ -2,13 +2,17 @@
 <html>
 <head>
   <title>MusicGearShare</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= stylesheet_link_tag    'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
-<%= link_to "Your Gear", gears_path %>
-<%= yield %>
+<body ng-app="app">
+  <%= link_to "Your Gear", gears_path %>
+
+    <ui-view > </ui-view>
+
+  <%= yield %>
+  
 
 </body>
 </html>
