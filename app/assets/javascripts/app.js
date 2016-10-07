@@ -7,10 +7,15 @@ angular
         templateUrl: 'home/index.html',
         controller: 'HomeController'
       })
-       .state('gear', {
+      .state('gear', {
         url: '/gear',
         templateUrl: 'gear/gear_index.html',
         controller: 'GearController'
+      })
+      .state('profile', {
+        url: '/profile',
+        templateUrl: 'user/user_profile.html',
+        controller: 'UserController'
       })
       $urlRouterProvider.otherwise('/');
   });
