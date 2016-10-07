@@ -1,14 +1,22 @@
 {
-  "lib": {
-    "name": "bower-rails generated lib assets",
-    "dependencies": {
-      "angular": "v1.2.25",
-      "angular-ui-router": "v0.3.1"
-    }
-  },
-  "vendor": {
-    "name": "bower-rails generated vendor assets",
-    "dependencies": {
-    }
+  "name": "music-gear-share",
+  "homepage": "https://github.com/cassaram09/music-gear-share",
+  "authors": [
+    "cassaram09 <cassaram09@gmail.com>"
+  ],
+  "description": "App for sharing music gear",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "v1.5.8",
+    "angular-ui-router": "latest"
   }
 }

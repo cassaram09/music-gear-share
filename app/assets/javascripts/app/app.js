@@ -2,13 +2,13 @@ angular
   .module('app', ['ui.router', 'templates'])  
   .config(function($stateProvider){
     $stateProvider
-      .state('gears', {
-        url: '/gears',
-        templateUrl: 'gear.html',
-        // controller: 'GearController'
+      .state('home', {
+        url: '/',
+        templateUrl: 'templates/index.html',
+        controller: 'HomeController'
       });
-  })
-   .config(function($httpProvider) {
-    // for CSRF errors
-    $httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
   });
+  // .config(function($httpProvider) {
+  //   // for CSRF errors
+  //   $httpProvider.defaults.headers.common['X-CSRF-Token'] = $('meta[name=csrf-token]').attr('content');
+  // });
