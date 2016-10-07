@@ -6,7 +6,12 @@ angular
         url: '/',
         templateUrl: 'home/index.html',
         controller: 'HomeController'
-      });
+      })
+       .state('gear', {
+        url: '/gear',
+        templateUrl: 'gear/gear_index.html',
+        controller: 'GearController'
+      })
       $urlRouterProvider.otherwise('/');
   });
   // .config(function($httpProvider) {
