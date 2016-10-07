@@ -55,7 +55,6 @@ function GearService($http){
   }
 
   function handleResponse(response){
-    console.log(response);
     return response.data;
   }
 

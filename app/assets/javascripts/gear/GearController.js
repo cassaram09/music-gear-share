@@ -3,8 +3,6 @@ function GearController(GearService) {
 
   vm.name = "I'm gear";
 
-  vm.gears;
-
   activate();
 
   function activate(){

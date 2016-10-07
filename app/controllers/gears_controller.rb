@@ -2,11 +2,15 @@ class GearsController < ApplicationController
   before_action :set_gear, except: [:create, :new, :index]
 
   def index
-    @gears = @user.gears
+    @gears = Gear.all
+    render json: @gears
   end
 
   def new
-    @gear = Gear.new
+    @gear = Gear.new(gear_params)
+    if @gear.save
+      render json: @gear
+    end
   end
 
   def create
