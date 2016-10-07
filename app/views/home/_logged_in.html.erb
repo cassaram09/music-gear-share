@@ -1,9 +1,10 @@
 <div class="header">
   <div class="container">
     <h1>Home</h1>
+    <ui-view > </ui-view>
   </div>
 </div>
 
 <div class="container">
-  <%= link_to "Log Out", logout_path, method: 'delete' %>
+  <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
 </div> <!-- container end -->
