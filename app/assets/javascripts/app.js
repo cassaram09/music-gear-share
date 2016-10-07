@@ -1,12 +1,13 @@
 angular
   .module('app', ['ui.router', 'templates'])  
-  .config(function($stateProvider){
+  .config(function($stateProvider, $urlRouterProvider){
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'templates/index.html',
+        templateUrl: 'home/index.html',
         controller: 'HomeController'
       });
+      $urlRouterProvider.otherwise('/');
   });
   // .config(function($httpProvider) {
   //   // for CSRF errors
