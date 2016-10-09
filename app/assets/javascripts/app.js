@@ -17,8 +17,28 @@ angular
           }
         }
       })
+      .state('gear.edit-gear', {
+        url: '/edit-gear',
+        templateUrl: 'gear/gear_index.html',
+        controller: 'GearController',
+        resolve: {
+          gears: function(GearService){
+            return GearService.getGears();
+          }
+        }
+      })
       .state('profile', {
         url: '/profile',
+        templateUrl: 'user/user_profile.html',
+        controller: 'UserController'
+      })
+      .state('messages', {
+        url: '/messages',
+        templateUrl: 'user/user_profile.html',
+        controller: 'UserController'
+      })
+      .state('messages.new-message', {
+        url: '/new-message',
         templateUrl: 'user/user_profile.html',
         controller: 'UserController'
       })
