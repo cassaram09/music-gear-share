@@ -5,11 +5,9 @@
     <li><a href="" ui-sref="home" ui-sref-active="active">Home</a></li>
     <li><a href="/profile">Profile</a></li>
     <li><a href="" ui-sref="gear" ui-sref-active="active">Gear</a></li>
+    <li><a href="" ui-sref="messages" ui-sref-active="active">Messages</a></li>
+    <li><%= link_to "Log Out", logout_path, method: :delete %></li>
   </ul>
-    <ui-view > </ui-view>
+    <ui-view></ui-view>
   </div>
 </div>
-
-<div class="container">
-  <%= link_to "Log Out", logout_path, method: :delete %>
-</div> <!-- container end -->

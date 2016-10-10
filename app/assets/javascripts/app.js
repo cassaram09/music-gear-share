@@ -39,8 +39,8 @@ angular
       })
       .state('messages.new-message', {
         url: '/new-message',
-        templateUrl: 'user/user_profile.html',
-        controller: 'UserController'
+        templateUrl: 'messages/messages_new.html',
+        controller: 'MessagesController'
       })
       $urlRouterProvider.otherwise('/');
   })
