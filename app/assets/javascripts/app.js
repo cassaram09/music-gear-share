@@ -4,8 +4,7 @@ angular
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: 'home/index.html',
-        controller: 'HomeController'
+        template: '<home-component>'
       })
       .state('gear', {
         url: '/gear',
