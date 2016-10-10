@@ -1,1 +1,9 @@
-adsad
+<form ng-submit="ctrl.editUser()">
+  <label for="content">Email:</label>
+  <input ng-model="ctrl.user.email" type="email" name="email"></input><br/>
+  <label for="content">Password:</label>
+  <input ng-model="ctrl.user.password" type="password" name="password_field"></input>
+  <input ng-model="ctrl.user.password" type="password" name="password_confirmation"></input>
+  <input type="hidden" name="user_id" value="ctrl.user.id"></input>
+  <input type="submit" value="Edit Profile">
+</form>

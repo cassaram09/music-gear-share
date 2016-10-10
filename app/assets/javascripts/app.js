@@ -8,13 +8,7 @@ angular
       })
       .state('gear', {
         url: '/gear',
-        templateUrl: 'gear/gear_index.html',
-        controller: 'GearController',
-        resolve: {
-          gears: function(GearService){
-            return GearService.getGears();
-          }
-        }
+        template: '<gear-component>'
       })
       .state('gear.edit-gear', {
         url: '/edit-gear',
