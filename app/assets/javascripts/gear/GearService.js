@@ -3,11 +3,18 @@ function GearService($http){
     getGears: getGears,
     createGear: createGear,
     updateGear: updateGear,
-    deleteGear: deleteGear
+    deleteGear: deleteGear,
+    getMyGears: getMyGears
   }
 
   function getGears() {
     return $http.get('api/v1/gears')
+      .then(handleResponse)
+      .catch(handleError);
+  }
+
+  function getMyGears() {
+    return $http.get('api/v1/my-gear')
       .then(handleResponse)
       .catch(handleError);
   }

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :messages
       resources :gears
+      get '/my-gear' => 'gears#my_gear'
     end
   end
  

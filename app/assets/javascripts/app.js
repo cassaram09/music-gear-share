@@ -10,16 +10,10 @@ angular
         url: '/gear',
         template: '<gear-component>'
       })
-      // .state('gear.edit-gear', {
-      //   url: '/edit-gear/:id',
-      //   templateUrl: 'gear/gear_index.html',
-      //   controller: 'GearController',
-      //   resolve: {
-      //     gears: function(GearService){
-      //       return GearService.getGears();
-      //     }
-      //   }
-      // })
+      .state('edit-gear', {
+        url: '/edit-gear',
+        template: '<edit-gear-component>'
+      })
       .state('add-gear', {
         url: '/add-gear',
         template: '<create-gear-component>'

@@ -8,8 +8,14 @@ module Api
         render json: @gears
       end
 
+      def my_gear
+        @gears = @user.gears
+        render json: @gears
+      end
+
       def create
-         @gear = Gear.new(gear_params)
+        @gear = Gear.new(gear_params)
+        @gear.user_id = @user.id
         if @gear.save
           render json: @gear
         end
