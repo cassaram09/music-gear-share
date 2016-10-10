@@ -1,9 +1,11 @@
-function GearController(GearService) {
+function GearController(GearService, $state, $scope) {
   vm = this;
 
   vm.name = "I'm gear";
 
   vm.newGear = {};
+
+  vm.createGear = createGear;
 
   activate();
 
@@ -20,7 +22,9 @@ function GearController(GearService) {
   }
 
   function createGear() {
-    return GearService.createGear().then(setGears);
+    GearService.createGear(vm.newGear);
+    vm.newGear = {};
+    $state.go('gear')
   }
 
 

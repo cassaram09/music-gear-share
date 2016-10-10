@@ -3,8 +3,10 @@
 
   {{ctrl.newGear}}
 
+   {{ctrl.name}}
+
   <form ng-submit="ctrl.createGear()">
-      <label for="content">Content:</label>
+      <label>Content:</label>
       <textarea ng-model="ctrl.newGear.gear_type"></textarea>
       <input type="submit" value="Add Gear">
   </form>

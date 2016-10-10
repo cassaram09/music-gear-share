@@ -1,22 +1,18 @@
 module Api
   module V1
     class GearsController < ApplicationController
-      before_action :set_gear, except: [:create, :new, :index]
+      before_action :set_gear, except: [:create, :index]
 
       def index
         @gears = Gear.all
         render json: @gears
       end
 
-      def new
-        @gear = Gear.new(gear_params)
+      def create
+         @gear = Gear.new(gear_params)
         if @gear.save
           render json: @gear
         end
-      end
-
-      def create
-        @gear = Gear.create(gear_params)
       end
 
       def show
