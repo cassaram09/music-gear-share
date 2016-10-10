@@ -3,6 +3,8 @@ function GearController(GearService) {
 
   vm.name = "I'm gear";
 
+  vm.newGear = {};
+
   activate();
 
   function activate(){
@@ -15,6 +17,10 @@ function GearController(GearService) {
 
   function setGears(data) {
     return vm.gears = data;
+  }
+
+  function createGear() {
+    return GearService.createGear().then(setGears);
   }
 
 

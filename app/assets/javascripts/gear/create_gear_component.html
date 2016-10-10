@@ -1,0 +1,11 @@
+<div style="border: 1px dotted red;">
+  <h2>Add Gear</h2>
+
+  {{ctrl.newGear}}
+
+  <form ng-submit="ctrl.createGear()">
+      <label for="content">Content:</label>
+      <textarea ng-model="ctrl.newGear.gear_type"></textarea>
+      <input type="submit" value="Add Gear">
+  </form>
+</div>

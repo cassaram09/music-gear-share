@@ -1,6 +1,10 @@
 <div style="border: 1px dotted red;">
   <h2>Gear For Rent</h2>
 
+   <a href="" ui-sref="gear.add-gear" ui-sref-active="active">Add Gear</a>
+
+   <ui-view></ui-view>
+
   <ul>
     <li ng-repeat="gear in ctrl.gears track by gear.id">
       <p>{{gear.id}}</p>

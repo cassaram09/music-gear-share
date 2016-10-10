@@ -20,6 +20,10 @@ angular
           }
         }
       })
+      .state('gear.add-gear', {
+        url: '/add-gear',
+        template: '<create-gear-component>'
+      })
       .state('profile', {
         url: '/profile',
         templateUrl: 'user/user_profile.html',
