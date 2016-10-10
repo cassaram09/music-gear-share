@@ -3,6 +3,8 @@ function GearController(GearService, $state, $scope) {
 
   vm.name = "I'm gear";
 
+  vm.filter;
+
   vm.newGear = {};
 
   vm.createGear = createGear;
