@@ -7,7 +7,7 @@ function GearService($http){
   }
 
   function getGears() {
-    return $http.get('/gears')
+    return $http.get('api/v1/gears')
       .then(handleResponse)
       .catch(handleError);
   }
@@ -15,7 +15,7 @@ function GearService($http){
   function createGear(gear){
     var req = {
       method: 'POST',
-      url: '/gears',
+      url: 'api/v1/gears',
       headers: {
         'Content-Type': 'application/json'
       },
@@ -29,7 +29,7 @@ function GearService($http){
   function updateGear(gear){
     var req = {
       method: 'PATCH',
-      url: '/gears/' + gear.id,
+      url: 'api/v1/gears/' + gear.id,
       headers: {
         'Content-Type': 'application/json'
       },
@@ -43,7 +43,7 @@ function GearService($http){
   function deleteGear(gear){
     var req = {
       method: 'DELETE',
-      url: '/gears/' + gear.id,
+      url: 'api/v1/gears/' + gear.id,
       headers: {
         'Content-Type': 'application/json'
       },
