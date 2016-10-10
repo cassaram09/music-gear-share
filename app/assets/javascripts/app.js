@@ -34,8 +34,8 @@ angular
       })
       .state('messages', {
         url: '/messages',
-        templateUrl: 'user/user_profile.html',
-        controller: 'UserController'
+        templateUrl: 'messages/messages_index.html',
+        controller: 'MessagesController'
       })
       .state('messages.new-message', {
         url: '/new-message',
