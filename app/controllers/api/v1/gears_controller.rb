@@ -4,7 +4,7 @@ module Api
       before_action :set_gear, except: [:create, :index]
 
       def index
-        @gears = Gear.all
+        @gears = Gear.all.order(:id).reverse
         render json: @gears
       end
 
