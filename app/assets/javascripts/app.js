@@ -8,27 +8,22 @@ angular
       })
       .state('gear', {
         url: '/gear',
-        templateUrl: 'gear/views/gear.html',
+        template: '<gear-component gears="ctrl.gears">',
         controller: 'GearController as ctrl',
         resolve: {
-          gear: 
-              function(GearService) {
-              return GearService.getGears();
+          gear: function(GearService) {
+            return GearService.getGears();
           },
         }
       })
       .state('my-gear', {
         url: '/my-gear',
-        template: '<my-gear-component>'
+        template: '<my-gear-component>',
       })
       .state('gear.add', {
         url: '/add',
-         templateUrl: 'gear/views/create_gear_component.html',
-        controller: 'GearController as ctrl',
-        resolve: {
-          gear: function() { return []; }
-        }
-        
+        templateUrl: 'gear/views/create_gear_component.html',
+        controller: 'CreateGearController as ctrl' 
       })
       .state('profile', {
         url: '/profile',

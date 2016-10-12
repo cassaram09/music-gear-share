@@ -7,7 +7,7 @@
   </div>
 
   <ul>
-    <li ng-repeat="gear in ctrl.myGear | filter: ctrl.filter track by gear.id ">
+    <li ng-repeat="gear in ctrl.gears | filter: ctrl.filter track by gear.id ">
       <form ng-submit="ctrl.updateGear(gear)">
         <label for="content">Content:</label>
         <input ng-model="ctrl.gears[$index].gear_type"></input>

@@ -2,23 +2,22 @@ function MyGearController(GearService, $state, $scope) {
   vm = this;
 
   vm.filter;
-  vm.myGear;
+  vm.gears;
   vm.updateGear = updateGear;
   vm.deleteGear = deleteGear;
 
   activate();
 
   function activate(){
-    getGears();
-
+    return GetGears().then(SetGears);
   }
 
-  function getGears(){
-    return GearService.getMyGears().then(setGears);
+  function GetGears(){
+    return GearService.getMyGears();
   }
 
-  function setGears(data) {
-    return vm.myGear = data;
+  function SetGears(data){
+    vm.gears = data;
   }
 
   function updateGear(gear) {
