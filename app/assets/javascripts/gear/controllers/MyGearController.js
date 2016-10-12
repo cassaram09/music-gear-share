@@ -1,14 +1,9 @@
-function EditGearController(GearService, $state, $scope) {
+function MyGearController(GearService, $state, $scope) {
   vm = this;
 
-  vm.name = "I'm gear";
-
   vm.filter;
-
   vm.gears;
-
   vm.updateGear = updateGear;
-
   vm.deleteGear = deleteGear;
 
   activate();
@@ -34,9 +29,8 @@ function EditGearController(GearService, $state, $scope) {
     $state.reload();
   }
 
-
 }
 
 angular
   .module('app')
-  .controller('EditGearController', EditGearController);
+  .controller('MyGearController', MyGearController);

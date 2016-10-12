@@ -10,9 +10,9 @@ angular
         url: '/gear',
         template: '<gear-component>'
       })
-      .state('edit-gear', {
-        url: '/edit-gear',
-        template: '<edit-gear-component>'
+      .state('my-gear', {
+        url: '/my-gear',
+        template: '<my-gear-component>'
       })
       .state('add-gear', {
         url: '/add-gear',
