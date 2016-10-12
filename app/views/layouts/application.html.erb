@@ -8,6 +8,8 @@
 </head>
 <body ng-app="app">
 
+  <div id="wrapper">
+
   <% if current_user && user_signed_in? %>
     <%= render "application/logged_in_nav" %>
   <% else %>
@@ -16,12 +18,15 @@
   
   <%= yield %>
 
-  <footer>
+  
+
+</div>
+
+<footer>
     <div class="container">
       <p>&copy; MusicGearShare 2016</p>
     </div>
   </footer>
-
   
 </body>
 </html>

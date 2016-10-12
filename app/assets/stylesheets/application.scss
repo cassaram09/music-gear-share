@@ -17,3 +17,34 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+footer {
+  padding: 40px 0px;
+  margin-top: 50px;
+  background-color: #333;
+  color: #fff;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+html, body {
+  height: 100%;
+}
+
+#wrapper {
+  min-height: 100%;
+}
+
+.main {
+  overflow:auto;
+  padding-bottom:40px; /* this needs to be bigger than footer height*/
+}
+
+footer {
+  position: relative;/* negative value of footer height */
+  padding: 20px 0px;
+  clear:both;
+} 
