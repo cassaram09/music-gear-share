@@ -1,5 +1,5 @@
 EditGearComponent = {
-  templateUrl: 'gear/edit_gear_component.html',
+  templateUrl: 'gear/views/edit_gear_component.html',
   controller: 'EditGearController as ctrl',
   restrict: 'EA',
 

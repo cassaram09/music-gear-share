@@ -1,5 +1,5 @@
 CreateGearComponent = {
-  templateUrl: 'gear/create_gear_component.html',
+  templateUrl: 'gear/views/create_gear_component.html',
   controller: 'GearController as ctrl',
   restrict: 'EA'
 };
