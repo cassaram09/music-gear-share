@@ -1,4 +1,4 @@
-<div style="border: 1px dotted red;">
+<div>
   <h2>My Gear</h2>
 
   <div>
@@ -6,19 +6,16 @@
     <input ng-model="ctrl.filter">
   </div>
 
-  <ul>
-    <li ng-repeat="gear in ctrl.gears | filter: ctrl.filter track by gear.id ">
-      <form ng-submit="ctrl.updateGear(gear)">
-        <label for="content">Content:</label>
-        <input ng-model="ctrl.gears[$index].gear_type"></input>
-        <input type="submit" value="Update Gear">
-
-      </form>
-      <form ng-submit="ctrl.deleteGear(gear)">
-        <input type="submit" value="Delete">
-      </form>
-      <a href="">Rent This Gear</a>
-    </li>
-  </ul>
+  <div ng-repeat="gear in ctrl.gears | filter: ctrl.filter track by gear.id ">
+    <h3>{{gear.gear_type}}</h3>
+    <form ng-submit="ctrl.updateGear(gear)">
+      <label for="content">Content:</label>
+      <input ng-model="ctrl.gears[$index].gear_type"></input>
+      <input type="submit" value="Update Gear">
+    </form>
+    <form ng-submit="ctrl.deleteGear(gear)">
+      <input type="submit" value="Delete">
+    </form>
+  </div>
 
 </div>
