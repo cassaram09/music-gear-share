@@ -9,7 +9,7 @@ module Api
       end
 
       def my_gear
-        @gears = @user.gears
+        @gears = @user.gears.order(:id)
         render json: @gears
       end
 
@@ -30,7 +30,9 @@ module Api
       end
 
       def update
-        render json: @gear
+        if @gear.update(gear_params)
+          render json: @gear
+        end
       end
 
       def destroy

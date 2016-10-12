@@ -34,16 +34,17 @@ function GearService($http){
   }
 
   function updateGear(gear){
-    var req = {
-      method: 'PATCH',
-      url: 'api/v1/gears/' + gear.id,
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      data: {
-        gear: gear
-      }
-    };
+      var req = {
+        method: 'PATCH',
+        url: 'api/v1/gears/' + gear.id,
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        data: {
+          gear: gear
+        }
+    }
+
     return $http(req).catch(handleError);
   }
 

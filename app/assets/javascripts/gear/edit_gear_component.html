@@ -8,18 +8,20 @@
     <input ng-model="ctrl.filter">
   </div>
 
+  {{ctrl.gears}}
+  
+
   <ul>
     <li ng-repeat="gear in ctrl.gears | filter: ctrl.filter track by gear.id ">
-      <form ng-submit="ctrl.updateGear(ctrl.gear)">
+      <form ng-submit="ctrl.updateGear(gear)">
         <label for="content">Content:</label>
-        <input ng-model="ctrl.gear.gear_type"></input>
+        <input ng-model="ctrl.gears[$index].gear_type"></input>
         <input type="submit" value="Update Gear">
+
       </form>
-      <p>{{gear.id}}</p>
-      <p>{{gear.gear_type}}</p>
-      <p>{{gear.value}}</p>
-      <p>{{gear.user_id}} This will be the UserName</p>
+      <p>{{gear}}</p>
       <a href="">Rent This Gear</a>
     </li>
   </ul>
+
 </div>

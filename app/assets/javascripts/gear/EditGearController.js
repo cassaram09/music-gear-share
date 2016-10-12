@@ -5,9 +5,9 @@ function EditGearController(GearService, $state, $scope) {
 
   vm.filter;
 
-  vm.newGear = {};
+  vm.gears;
 
-  vm.createGear = createGear;
+  vm.updateGear = updateGear;
 
   activate();
 
@@ -23,10 +23,9 @@ function EditGearController(GearService, $state, $scope) {
     return vm.gears = data;
   }
 
-  function createGear() {
-    GearService.createGear(vm.newGear);
-    vm.newGear = {};
-    $state.go('gear')
+  function updateGear(gear) {
+    GearService.updateGear(gear);
+    alert('Updated!');
   }
 
 
