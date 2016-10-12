@@ -7,6 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body ng-app="app">
+
+  <% if current_user && user_signed_in? %>
+    <%= render "application/logged_in_nav" %>
+  <% else %>
+    <%= render "application/logged_out_nav" %>
+  <% end %>
   
   <%= yield %>
 

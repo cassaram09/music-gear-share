@@ -1,7 +1,13 @@
 function MessagesController() {
   vm = this;
 
-  vm.name = "We're in the messages controller!";
+  vm.name = "Still working on this! Check back later"
+
+  activate();
+
+  function activate(){
+    sweetAlert("Still working on this! Check back later");
+  }
 
 }
 
