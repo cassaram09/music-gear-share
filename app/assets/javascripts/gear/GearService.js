@@ -45,7 +45,7 @@ function GearService($http){
         }
     }
 
-    return $http(req).catch(handleError);
+    return $http(req).then(handleUpdateResponse).catch(handleError);
   }
 
   function deleteGear(gear){
@@ -62,12 +62,19 @@ function GearService($http){
     return $http(req).catch(handleError);
   }
 
+  function handleUpdateResponse(response){
+    sweetAlert('Updated!');
+    return response.data;
+  }
+
+
   function handleResponse(response){
     return response.data;
   }
 
   function handleError(error){
     console.log(error);
+    sweetAlert("There was an error!", "","error")
   }
 }
 

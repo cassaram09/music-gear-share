@@ -25,7 +25,6 @@ function EditGearController(GearService, $state, $scope) {
 
   function updateGear(gear) {
     GearService.updateGear(gear);
-    sweetAlert('Updated!');
   }
 
 
