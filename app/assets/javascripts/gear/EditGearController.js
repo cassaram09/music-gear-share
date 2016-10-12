@@ -9,6 +9,8 @@ function EditGearController(GearService, $state, $scope) {
 
   vm.updateGear = updateGear;
 
+  vm.deleteGear = deleteGear;
+
   activate();
 
   function activate(){
@@ -25,6 +27,11 @@ function EditGearController(GearService, $state, $scope) {
 
   function updateGear(gear) {
     GearService.updateGear(gear);
+  }
+
+  function deleteGear(gear) {
+    GearService.deleteGear(gear);
+    $state.reload();
   }
 
 

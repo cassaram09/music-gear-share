@@ -59,12 +59,16 @@ function GearService($http){
         gear: gear
       }
     };
-    return $http(req).catch(handleError);
+    return $http(req).then(handleDeleteResponse).catch(handleError);
   }
 
   function handleUpdateResponse(response){
     sweetAlert('Updated!');
     return response.data;
+  }
+
+  function handleDeleteResponse(response){
+    sweetAlert('Deleted');
   }
 
 

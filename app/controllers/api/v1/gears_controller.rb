@@ -37,7 +37,7 @@ module Api
 
       def destroy
         @gear.destroy
-        redirect_to gears_path
+        render json: @gear
       end
 
       ## PRIVATE METHODS
