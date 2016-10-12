@@ -1,7 +1,10 @@
 GearComponent ={
   templateUrl: 'gear/views/gear_component.html',
-  controller: 'GearController as ctrl',
-  restrict: 'EA'
+  controllerAs: 'ctrl',
+  restrict: 'EA',
+  bindings:{
+    gears: "="
+  }
 };
 
 angular
