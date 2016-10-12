@@ -1,10 +1,6 @@
 <div style="border: 1px dotted red;">
   <h2>Add Gear</h2>
 
-  {{ctrl.newGear}}
-
-  {{ctrl.name}}
-
   <form ng-submit="ctrl.createGear()">
       <label>Content:</label>
       <textarea ng-model="ctrl.newGear.gear_type"></textarea>

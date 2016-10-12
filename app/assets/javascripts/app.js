@@ -20,7 +20,7 @@ angular
         url: '/my-gear',
         template: '<my-gear-component>',
       })
-      .state('gear.add', {
+      .state('my-gear.add', {
         url: '/add',
         templateUrl: 'gear/views/create_gear_component.html',
         controller: 'CreateGearController as ctrl' 
