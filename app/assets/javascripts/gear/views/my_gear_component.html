@@ -1,18 +1,13 @@
 <div style="border: 1px dotted red;">
   <h2>My Gear</h2>
 
-  {{ctrl.name}}
-
    <div>
     <p>Search the gear listings...</p>
     <input ng-model="ctrl.filter">
   </div>
 
-  {{ctrl.gears}}
-  
-
   <ul>
-    <li ng-repeat="gear in ctrl.gears | filter: ctrl.filter track by gear.id ">
+    <li ng-repeat="gear in ctrl.myGear | filter: ctrl.filter track by gear.id ">
       <form ng-submit="ctrl.updateGear(gear)">
         <label for="content">Content:</label>
         <input ng-model="ctrl.gears[$index].gear_type"></input>

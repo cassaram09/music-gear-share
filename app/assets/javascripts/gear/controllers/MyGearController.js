@@ -2,7 +2,7 @@ function MyGearController(GearService, $state, $scope) {
   vm = this;
 
   vm.filter;
-  vm.gears;
+  vm.myGear;
   vm.updateGear = updateGear;
   vm.deleteGear = deleteGear;
 
@@ -10,6 +10,7 @@ function MyGearController(GearService, $state, $scope) {
 
   function activate(){
     getGears();
+
   }
 
   function getGears(){
@@ -17,7 +18,7 @@ function MyGearController(GearService, $state, $scope) {
   }
 
   function setGears(data) {
-    return vm.gears = data;
+    return vm.myGear = data;
   }
 
   function updateGear(gear) {
