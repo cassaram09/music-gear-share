@@ -1,7 +1,9 @@
 <div>
   <h2>My Gear</h2>
+  <div>
 
-  <a href="" ui-sref="my-gear.add" ui-sref-active="active">Add Gear</a>
+    <p><a href="" ui-sref="my-gear.add" ui-sref-active="active"  class="btn-sm btn-primary">Add Gear</a></p>
+  </div>
 
   <ui-view></ui-view>
 
@@ -13,19 +15,27 @@
   <div ng-repeat="gear in ctrl.gears | filter: ctrl.filter track by gear.id " ng-class="{ 'has-error' : gearFieldForm.gear_type.$invalid }">
     <h3>{{gear.gear_type}}</h3>
     <form name="gearFieldForm_{{$index}}" ng-submit="ctrl.updateGear(gear)" >
-    <ng-form name="gearFieldForm">
-      <label for="gear_type">Gear Type:</label>
-      <input ng-model="ctrl.gears[$index].gear_type" name="gear_type"  required="required"></input>
-      <p class="help-block" ng-show="gearFieldForm.gear_type.$invalid">Valid Gear Type Required</p>
-      <div ng-messages="gearFieldForm.gear_type.$error" >
-        <div ng-message="required">Gear Type is required!!!!</div>
-      </div>
-      <input type="submit" value="Update Gear">
-    </ng-form>
+      <ng-form name="gearFieldForm">
+        <div class="form-group">
+          <label for="gear_type">Gear Type:</label>
+          <input ng-model="ctrl.gears[$index].gear_type" name="gear_type"  required="required"></input>
+        </div>
+          
+        <div class="form-group">
+          <input type="submit" value="Update Gear" class="btn-sm btn-primary">
+        </div>
+
+        <div ng-messages="gearFieldForm.gear_type.$error" >
+          <div class="help-block" ng-message="required">Gear Type is required!!!!</div>
+        </div>
+
+      </ng-form>
     </form>
+
     <form ng-submit="ctrl.deleteGear(gear)">
-      <input type="submit" value="Delete">
+      <input type="submit" value="Delete" class="btn-sm btn-danger">
     </form>
+
   </div>
 
 </div>
