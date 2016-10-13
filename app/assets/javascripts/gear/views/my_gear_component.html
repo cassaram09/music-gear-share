@@ -14,6 +14,8 @@
 
   <div ng-repeat="gear in ctrl.gears | filter: ctrl.filter track by gear.id " ng-class="{ 'has-error' : gearFieldForm.name.$invalid }">
 
+    <div class="line-dark"></div>
+
     <h3>{{gear.name}}</h3>
 
     <form name="gearFieldForm_{{$index}}" ng-submit="ctrl.updateGear(gear)" >

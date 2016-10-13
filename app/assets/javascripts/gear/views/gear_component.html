@@ -1,4 +1,4 @@
-<div style="border: 1px dotted red;">
+<div>
   <h2>Rent Gear</h2>
 
   <div>
@@ -7,6 +7,7 @@
   </div>
 
   <div ng-repeat="gear in ctrl.gears | filter: ctrl.filter track by gear.id ">
+    <div class="line-dark"></div>
     <h3>{{gear.name}}</h3>
     <p>Rental Fee: {{gear.rental_fee}}</p>
     <p>{{gear.description}}</p>
