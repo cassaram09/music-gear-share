@@ -21,7 +21,6 @@ function MyGearController(GearService, $state, $scope) {
   }
 
   function updateGear(gear) {
-    debugger
     GearService.updateGear(gear);
   }
 

@@ -11,7 +11,7 @@
     <h3>{{gear.name}}</h3>
     <p>Rental Fee: {{gear.rental_fee}}</p>
     <p>{{gear.description}}</p>
-    <a href="">Rent This Gear</a>
+    <a ng-controller="MessagesController as ctrl" href="" ng-click="ctrl.sendMessage()">Rent This Gear</a>
   </div>
 
 </div>
