@@ -12,24 +12,41 @@
     <input ng-model="ctrl.filter">
   </div>
 
-  <div ng-repeat="gear in ctrl.gears | filter: ctrl.filter track by gear.id " ng-class="{ 'has-error' : gearFieldForm.gear_type.$invalid }">
-    <h3>{{gear.gear_type}}</h3>
+  <div ng-repeat="gear in ctrl.gears | filter: ctrl.filter track by gear.id " ng-class="{ 'has-error' : gearFieldForm.name.$invalid }">
+
+    <h3>{{gear.name}}</h3>
+
     <form name="gearFieldForm_{{$index}}" ng-submit="ctrl.updateGear(gear)" >
+
       <ng-form name="gearFieldForm">
+
         <div class="form-group">
-          <label for="gear_type">Gear Type:</label>
-          <input ng-model="ctrl.gears[$index].gear_type" name="gear_type"  required="required"></input>
+          <p><label for="name">Name:</label></p>
+          <input ng-model="ctrl.gears[$index].name" name="name"  required="required"></input>
+          <div ng-messages="gearFieldForm.name.$error" >
+            <div class="help-block" ng-message="required">Name is required</div>
+          </div>
         </div>
-          
+
+        <div class="form-group">
+          <p><label for="description">Description:</label></p>
+          <textarea ng-model="ctrl.gears[$index].description" name="description"  required="required" rows="5" cols="50"></textarea>
+          <div ng-messages="gearFieldForm.description.$error" >
+            <div class="help-block" ng-message="required">Description is required</div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <p><label for="rental_fee">Rental Fee:</label></p>
+          <input ng-model="ctrl.gears[$index].rental_fee" name="rental_fee" ></input>
+        </div>
+
         <div class="form-group">
           <input type="submit" value="Update Gear" class="btn-sm btn-primary">
         </div>
 
-        <div ng-messages="gearFieldForm.gear_type.$error" >
-          <div class="help-block" ng-message="required">Gear Type is required!!!!</div>
-        </div>
-
       </ng-form>
+
     </form>
 
     <form ng-submit="ctrl.deleteGear(gear)">
