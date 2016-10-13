@@ -9,6 +9,8 @@ Rails.application.routes.draw do
       resources :messages
       resources :gears
       get '/my-gear' => 'gears#my_gear'
+      get '/sent-messages' => 'gears#sent_messages'
+      get '/received-messages' => 'gears#received_messages'
     end
   end
  

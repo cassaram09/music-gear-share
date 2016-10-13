@@ -17,15 +17,11 @@ ActiveRecord::Schema.define(version: 20161009225344) do
   enable_extension "plpgsql"
 
   create_table "gears", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string   "gear_type"
-    t.integer  "quantity"
-    t.string   "condition"
-    t.string   "year"
-    t.integer  "value"
-    t.string   "rules"
-    t.string   "notes"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.string   "name"
+    t.string   "description"
+    t.integer  "rental_fee"
     t.integer  "user_id"
     t.integer  "lease_id"
   end
@@ -69,9 +65,9 @@ ActiveRecord::Schema.define(version: 20161009225344) do
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
+    t.string   "name"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.string   "name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
