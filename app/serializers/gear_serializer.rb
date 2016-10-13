@@ -1,3 +1,4 @@
 class GearSerializer < ActiveModel::Serializer
-  attributes :id, :gear_type, :quantity, :condition, :year, :value, :rules, :notes, :user_id, :lease_id
+  attributes :id, :name, :description, :rental_fee
+  has_one :user
 end
