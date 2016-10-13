@@ -7,9 +7,6 @@ function MessagesController($state, MessageService) {
   activate();
 
   function activate(){
-    swal({
-      title: "Nothing here yet!",   
-    });
   }
 
   function sendMessage(){
