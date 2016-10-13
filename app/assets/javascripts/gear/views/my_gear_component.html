@@ -10,28 +10,22 @@
     <input ng-model="ctrl.filter">
   </div>
 
-  <div ng-repeat="gear in ctrl.gears | filter: ctrl.filter track by gear.id ">
+  <div ng-repeat="gear in ctrl.gears | filter: ctrl.filter track by gear.id " ng-class="{ 'has-error' : gearFieldForm.gear_type.$invalid }">
     <h3>{{gear.gear_type}}</h3>
-    <form ng-submit="ctrl.updateGear(gear)">
-      <label for="content">Content:</label>
-      <input ng-model="ctrl.gears[$index].gear_type"></input>
+    <form name="gearFieldForm_{{$index}}" ng-submit="ctrl.updateGear(gear)" >
+    <ng-form name="gearFieldForm">
+      <label for="gear_type">Gear Type:</label>
+      <input ng-model="ctrl.gears[$index].gear_type" name="gear_type"  required="required"></input>
+      <p class="help-block" ng-show="gearFieldForm.gear_type.$invalid">Valid Gear Type Required</p>
+      <div ng-messages="gearFieldForm.gear_type.$error" >
+        <div ng-message="required">Gear Type is required!!!!</div>
+      </div>
       <input type="submit" value="Update Gear">
+    </ng-form>
     </form>
     <form ng-submit="ctrl.deleteGear(gear)">
       <input type="submit" value="Delete">
     </form>
   </div>
-
-  <form name="gearForm" novalidate>
-
-    <div class="form-group" ng-repeat="gear in ctrl.gears | filter: ctrl.filter track by gear.id " ng-class="{ 'has-error' : gearFieldForm.gear_type.$invalid }">
-      <ng-form name="gearFieldForm">
-        <label>{{ gear.gear+type }}</label>
-        <input type="text" class="form-control" name="gear_type" ng-model="ctrl.gears[$index].gear_type" required>
-        <p class="help-block" ng-show="gearFieldForm.gear_type.$invalid">Valid Gear Required</p>
-      </ng-form>
-    </div>
-
-  </form>
 
 </div>
