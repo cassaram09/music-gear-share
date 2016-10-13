@@ -3,13 +3,9 @@ class CreateGears < ActiveRecord::Migration
     create_table :gears do |t|
 
       t.timestamps null: false
-      t.string :gear_type
-      t.integer :quantity
-      t.string :condition
-      t.string :year
-      t.integer :value
-      t.string :rules
-      t.string :notes
+      t.string :name
+      t.string :description
+      t.integer :rental_fee
       t.belongs_to :user
       t.belongs_to :lease
 
