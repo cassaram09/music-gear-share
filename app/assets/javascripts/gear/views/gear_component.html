@@ -12,7 +12,7 @@
     <p>Rental Fee: {{gear.rental_fee}}</p>
     <p>{{gear.description}}</p>
     <p>{{gear.user.id}}</p>
-    <a ng-controller="MessagesController as msgCtrl" href="" ng-click="msgCtrl.sendMessage(gear.user.id)">Rent This Gear</a>
+    <a class="btn btn-primary" ng-controller="MessagesController as msgCtrl" href="" ng-click="msgCtrl.sendMessage(gear.user.id)">Rent This Gear</a>
   </div>
 
 </div>
