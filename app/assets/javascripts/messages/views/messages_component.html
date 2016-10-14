@@ -1,4 +1,8 @@
-<div ng-controller="MessagesController as ctrl">
-  <h2>
-  <ui-view></ui-view>
+<div>
+  <h2>Messages Index!</h2>
+    <ul class="nav nav-tabs">
+      <li> <a href="" ui-sref="messages.sent">Sent Messages</a> </li>
+      <li> <a href="" ui-sref="messages.received">Received Messages</a> </li>
+    </ul>
+    <ui-view></ui-view>
 </div>

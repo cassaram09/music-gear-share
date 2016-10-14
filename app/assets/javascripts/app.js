@@ -32,8 +32,11 @@ angular
       })
       .state('messages', {
         url: '/messages',
-        templateUrl: 'messages/messages_index.html',
-        controller: 'MessagesController'
+         template: '<messages-component>'
+      })
+      .state('messages.sent', {
+        url: '/sent',
+        template: '<sent-messages-component>'
       })
       .state('messages.new-message', {
         url: '/new-message',
