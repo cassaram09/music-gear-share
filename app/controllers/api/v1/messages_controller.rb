@@ -9,12 +9,12 @@ module Api
       end
 
       def sent_messages
-        @messages = @user.gears.order(:id)
+        @messages = @user.sent_messages.order(:id).reverse
         render json: @messages
       end
 
        def received_messages
-        @messages = @user.gears.order(:id)
+        @messages = @user.received_messages.order(:id).reverse
         render json: @messages
       end
 
