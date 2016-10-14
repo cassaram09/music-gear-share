@@ -1,7 +1,6 @@
 function MessagesController($state, MessageService) {
   vm = this;
 
-  vm.name = "Still working on this! Check back later"
   vm.sendMessage = sendMessage;
 
   activate();

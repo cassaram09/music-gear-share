@@ -1,6 +1,6 @@
 SentMessagesComponent ={
   templateUrl: 'messages/views/sent_messages_component.html',
-  controller: "MessagesController as ctrl",
+  controller: "SentMessagesController as ctrl",
   restrict: 'EA',
 };
 

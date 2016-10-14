@@ -6,14 +6,14 @@ function MessageService($http){
 
   }
 
-  function getSentMessages(id) {
-    return $http.get('api/v1/users/' + id + 'sent-messages')
+  function getSentMessages() {
+    return $http.get('api/v1/users/sent-messages')
       .then(handleResponse)
       .catch(handleError);
   }
 
-  function getReceivedMessages(id) {
-    return $http.get('api/v1/users/' + id + '/received-messages')
+  function getReceivedMessages() {
+    return $http.get('api/v1/users/received-messages')
       .then(handleResponse)
       .catch(handleError);
   }
@@ -41,6 +41,7 @@ function MessageService($http){
 
 
   function handleResponse(response){
+    console.log(response.data)
     return response.data;
   }
 

@@ -1,6 +1,15 @@
 <div>
   <h3>Sent Messages</h3>
 
-   <p>I'm sent message!</p>
+  <div>
+    <p>Search your messages...</p>
+    <input ng-model="ctrl.filter">
+  </div>
+
+  <div ng-repeat="message in ctrl.sentMessages | filter: ctrl.filter track by message.id ">
+    <div class="line-dark"></div>
+    <h4>To: {{message.recipient.name}}</h4>
+    <p>{{message.content}}</p>
+  </div>
 
 </div>
