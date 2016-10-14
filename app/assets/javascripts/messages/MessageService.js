@@ -18,7 +18,7 @@ function MessageService($http){
       .catch(handleError);
   }
 
-  function createMessage(message){
+  function createMessage(message, userId){
     var req = {
       method: 'POST',
       url: 'api/v1/messages',
@@ -27,12 +27,18 @@ function MessageService($http){
       },
       data: {
         message: {
-          content: message
+          content: message,
+          recipient_id: userId
         }
       }
     };
-    return $http(req).catch(handleError);
+    return $http(req).then(handleCreateResponse).catch(handleError);
   }
+
+  function handleCreateResponse(response){
+    sweetAlert("Message sent!", "","success")
+  }
+
 
   function handleResponse(response){
     return response.data;

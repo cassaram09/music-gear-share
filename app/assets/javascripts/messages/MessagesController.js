@@ -9,7 +9,8 @@ function MessagesController($state, MessageService) {
   function activate(){
   }
 
-  function sendMessage(){
+  function sendMessage(userId){
+    var recipient = userId
     swal({
       title: "Rent this gear",   
       text: "Send the owner a message",   
@@ -19,7 +20,7 @@ function MessagesController($state, MessageService) {
       type: "input"
     },
     function(inputValue){
-      MessageService.createMessage(inputValue);
+      return MessageService.createMessage(inputValue, recipient);  
     });
   }
 

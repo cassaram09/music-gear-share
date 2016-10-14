@@ -21,5 +21,5 @@
 //= require_tree .
 
 $('.nav a').click(function () {
-  $('#bs-example-navbar-collapse-1').collapse('hide');
+  $('.navbar-collapse').collapse('hide');
 });
