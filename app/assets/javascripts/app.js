@@ -39,14 +39,19 @@ angular
         template: '<sent-messages-component messages="ctrl.messages">',
         controller: 'SentMessagesController as ctrl',
         resolve: {
-          messages: function(MessageService) {
+          sentMessages: function(MessageService, DateService) {
             return MessageService.getSentMessages();
           },
         }
       })
        .state('messages.received', {
         url: '/received',
-        template: '<received-messages-component>'
+        template: '<received-messages-component messages="ctrl.messages">',
+        resolve: {
+          sentMessages: function(MessageService, DateService) {
+            return MessageService.getSentMessages();
+          },
+        }
       })
       $urlRouterProvider.otherwise('/');
   })

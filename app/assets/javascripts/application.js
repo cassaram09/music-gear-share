@@ -18,6 +18,7 @@
 //= require angular-ui-router/release/angular-ui-router
 //= require angular-rails-templates
 //= require sweetalert/dist/sweetalert.min
+//= require moment/moment
 //= require_tree .
 
 $('.nav a').click(function () {

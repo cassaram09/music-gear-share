@@ -1,7 +1,10 @@
 ReceivedMessagesComponent ={
   templateUrl: 'messages/views/received_messages_component.html',
-  controller: "ReceivedMessagesController as ctrl",
+  controllerAs: "ctrl",
   restrict: 'EA',
+  bindings: {
+    messages: "="
+  }
 };
 
 angular

@@ -1,21 +1,13 @@
-function ReceivedMessagesController($state, MessageService) {
+function ReceivedMessagesController(receivedMessages, DateService) {
   vm = this;
-  vm.receivedMessages;
   vm.filter;
 
   activate();
 
   function activate(){
-    return getReceivedMessages().then(SetMessages)
+    return vm.messages = DateService.updateMessageTime(receivedMessages);
   }
 
-  function getReceivedMessages(){
-    return MessageService.getReceivedMessages();
-  }
-
-  function SetMessages(data){
-    vm.receivedMessages = data;
-  }
 
 }
 

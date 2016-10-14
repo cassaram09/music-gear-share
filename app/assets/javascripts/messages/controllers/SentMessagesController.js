@@ -1,9 +1,12 @@
-function SentMessagesController(messages) {
+function SentMessagesController(sentMessages, DateService) {
   vm = this;
-  
   vm.filter;
 
-  vm.messages = messages;
+  activate();
+
+  function activate(){
+    return vm.messages = DateService.updateMessageTime(sentMessages);
+  }
 
 }
 
