@@ -38,10 +38,9 @@ angular
         url: '/sent',
         template: '<sent-messages-component>'
       })
-      .state('messages.new-message', {
-        url: '/new-message',
-        templateUrl: 'messages/messages_new.html',
-        controller: 'MessagesController'
+       .state('messages.received', {
+        url: '/received',
+        template: '<received-messages-component>'
       })
       $urlRouterProvider.otherwise('/');
   })
