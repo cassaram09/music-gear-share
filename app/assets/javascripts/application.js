@@ -19,3 +19,7 @@
 //= require angular-rails-templates
 //= require sweetalert/dist/sweetalert.min
 //= require_tree .
+
+$('.nav a').click(function () {
+  $('#bs-example-navbar-collapse-1').collapse('hide');
+});

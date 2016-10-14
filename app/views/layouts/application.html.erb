@@ -1,33 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>MusicGearShare</title>
-  <%= stylesheet_link_tag    'application', media: 'all' %>
-  <%= javascript_include_tag 'application' %>
-  <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body ng-app="app">
+  <head>
+    <title>MusicGearShare</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body ng-app="app">
 
-  <div id="wrapper">
+    <div id="wrapper">
 
-  <% if current_user && user_signed_in? %>
-    <%= render "application/logged_in_nav" %>
-  <% else %>
-    <%= render "application/logged_out_nav" %>
-  <% end %>
-  
-  <%= yield %>
+    <% if current_user && user_signed_in? %>
+      <%= render "application/logged_in_nav" %>
+    <% else %>
+      <%= render "application/logged_out_nav" %>
+    <% end %>
+    
+    <%= yield %>
 
-  
-
-</div>
-
-<footer>
-    <div class="container">
-      <p>&copy; MusicGearShare 2016</p>
     </div>
-  </footer>
-  
-</body>
+
+    <footer>
+      <div class="container">
+        <p>&copy; MusicGearShare 2016</p>
+      </div>
+    </footer>
+
+  </body>
 </html>
