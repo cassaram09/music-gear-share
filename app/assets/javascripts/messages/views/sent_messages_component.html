@@ -8,7 +8,7 @@
 
   <div ng-repeat="message in ctrl.sentMessages | filter: ctrl.filter track by message.id ">
     <div class="line-dark"></div>
-    <h4>To: {{message.recipient.name}}</h4>
+    <h4>To: {{message.recipient.username}}</h4>
     <p>{{message.content}}</p>
   </div>
 
