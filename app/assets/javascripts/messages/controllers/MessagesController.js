@@ -1,6 +1,5 @@
 function MessagesController($state, MessageService) {
   vm = this;
-
   vm.sendMessage = sendMessage;
 
   activate();

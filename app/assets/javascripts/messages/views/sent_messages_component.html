@@ -6,9 +6,10 @@
     <input ng-model="ctrl.filter">
   </div>
 
-  <div ng-repeat="message in ctrl.sentMessages | filter: ctrl.filter track by message.id ">
+  <div ng-repeat="message in ctrl.messages | filter: ctrl.filter track by message.id ">
     <div class="line-dark"></div>
     <h4>To: {{message.recipient.username}}</h4>
+    <h5>{{message.created_at}}</h5>
     <p>{{message.content}}</p>
   </div>
 

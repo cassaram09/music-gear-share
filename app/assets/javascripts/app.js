@@ -32,11 +32,17 @@ angular
       })
       .state('messages', {
         url: '/messages',
-         template: '<messages-component>'
+        template: '<messages-component>'
       })
       .state('messages.sent', {
         url: '/sent',
-        template: '<sent-messages-component>'
+        template: '<sent-messages-component messages="ctrl.messages">',
+        controller: 'SentMessagesController as ctrl',
+        resolve: {
+          messages: function(MessageService) {
+            return MessageService.getSentMessages();
+          },
+        }
       })
        .state('messages.received', {
         url: '/received',

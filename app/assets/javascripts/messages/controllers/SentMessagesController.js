@@ -1,21 +1,9 @@
-function SentMessagesController($state, MessageService) {
+function SentMessagesController(messages) {
   vm = this;
-  vm.sentMessages;
+  
   vm.filter;
 
-  activate();
-
-  function activate(){
-    return getSentMessages().then(SetMessages)
-  }
-
-  function getSentMessages(){
-    return MessageService.getSentMessages();
-  }
-
-  function SetMessages(data){
-    vm.sentMessages = data;
-  }
+  vm.messages = messages;
 
 }
 

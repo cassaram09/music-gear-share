@@ -6,10 +6,8 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-@user1 = User.create(email: "matt@matt.com", password: "hello123")
-@user2 = User.create(email: "jeff@jeff.com", password: "hello123")
-@lease = Lease.create(checkout: '10/10/16', checkin: '10/10/18', returned: false, notes: 'no notes here', owner_id: 1, renter_id: 2)
-@gear = Gear.create(name: "Ibanez guitar", description: "2005 red Ibanez guitar with whammy bar, dual tone setting.", rental_fee: 0, user_id: 1)
-@rating = Rating.create(reviewer_id: 2, reviewee_id: 1, notes: "Great rental")
+@user1 = User.create(username: "mattycranekicks", email: "matt@matt.com", password: "hello123")
+@user2 = User.create(username: "djeffy", email: "jeff@jeff.com", password: "hello123")
 
-@lease.gears << @gear
+@gear1 = Gear.create(name: "ibanez guitar", description: "it's a guitar", rental_fee: 0, user_id: 2)
+@gear1 = Gear.create(name: "Tama Swingstar", description: "2007 drum kit", rental_fee: 0, user_id: 1)
