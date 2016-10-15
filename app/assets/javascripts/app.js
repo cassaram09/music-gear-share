@@ -4,10 +4,6 @@ angular
     $stateProvider
       .state('home', {
         url: '/',
-        template: '<home-component>'
-      })
-      .state('gear', {
-        url: '/gear',
         template: '<gear-component gears="ctrl.gears">',
         controller: 'GearController as ctrl',
         resolve: {
