@@ -1,9 +1,11 @@
 <form ng-submit="ctrl.editUser()">
-  <label for="content">Email:</label>
+  <label for="email">Email:</label>
   <input ng-model="ctrl.user.email" type="email" name="email"></input><br/>
-  <label for="content">Password:</label>
-  <input ng-model="ctrl.user.password" type="password" name="password_field"></input>
-  <input ng-model="ctrl.user.password" type="password" name="password_confirmation"></input>
-  <input type="hidden" name="user_id" value="ctrl.user.id"></input>
-  <input type="submit" value="Edit Profile">
+  <label for="password">Password:</label>
+  <input ng-model="ctrl.user.password" type="password" name="password"></input><br/>
+  <label for="password">Confirm Password:</label>
+  <input ng-model="ctrl.user.password_confirmation" type="password" name="password_confirmation"></input><br/>
+  <label for="currentPassword">Current Password:</label>
+  <input ng-model="ctrl.user.current_password" type="password" name="curent_password" required></input><br/>
+  <input type="submit" class="btn btn-md btn-primary" value="Edit Profile">
 </form>

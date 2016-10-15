@@ -29,7 +29,7 @@ angular
       .state('profile', {
         url: '/profile',
         templateUrl: 'user/user_profile.html',
-        controller: 'UserController'
+        controller: 'UserController as ctrl'
       })
       .state('messages', {
         url: '/messages',

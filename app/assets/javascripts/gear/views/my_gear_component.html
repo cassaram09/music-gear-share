@@ -1,7 +1,7 @@
 <div>
   <div>
-    <h2 class="mygear_title">My Gear</h2>
-    <a href="" ui-sref="my-gear.add" ui-sref-active="active"  class="btn btn-md btn-primary add_gear">Add Gear</a>
+    <h2 class="gear_title">My Gear</h2>
+    <a href="" ui-sref="my-gear.add" ui-sref-active="active"  class="btn btn-md btn-primary gear_button">Add Gear</a>
   </div>
 
   <ui-view></ui-view>
@@ -66,7 +66,7 @@
         </ng-form>
 
       </form>
-      
+
       <div class="col-md-3">
         <form ng-submit="ctrl.deleteGear(gear)">
           <input type="submit" value="Delete" class="btn btn-md btn-danger">

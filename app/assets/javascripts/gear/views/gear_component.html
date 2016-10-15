@@ -10,11 +10,13 @@
 
   <div ng-repeat="gear in ctrl.gears | filter: ctrl.filter track by gear.id ">
     <div class="line-dark"></div>
-    <h3>{{gear.name}}</h3>
-    <p>Rental Fee: {{gear.rental_fee}}</p>
+    <div>
+    <h3 class="gear_title">{{gear.name}}</h3>
+      <a class="btn btn-md btn-primary gear_button" ng-controller="MessagesController as msgCtrl" href="" ng-click="msgCtrl.sendMessage(gear.user.id)">Rent This Gear</a>
+    </div>
     <p>{{gear.description}}</p>
-    <p>{{gear.user.id}}</p>
-    <a class="btn btn-md btn-primary" ng-controller="MessagesController as msgCtrl" href="" ng-click="msgCtrl.sendMessage(gear.user.id)">Rent This Gear</a>
+    <p>Rental Fee: {{gear.rental_fee}}</p>
+    
   </div>
 
 </div>

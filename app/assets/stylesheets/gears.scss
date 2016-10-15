@@ -2,18 +2,12 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.mygear_title{
-  display: inline-block;
-}
-
-.add_gear {
+.gear_title{
+    display: inline-block;
+  }
+  
+.gear_button{
   display: inline-block;
   margin: 10px 0px 20px 0px !important;
-  float: right;
-}
-
-.mygear_edit_button{
-  display: inline-block;
-  margin: 15px 0px 20px 0px !important;
   float: right;
 }

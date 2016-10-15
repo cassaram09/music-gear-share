@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
     
-  devise_for :users
+  devise_for :users, :controllers => { registrations: 'users/registrations' }
 
   root to: 'home#index'
 
@@ -12,6 +12,7 @@ Rails.application.routes.draw do
       get '/users/sent-messages' => 'messages#sent_messages'
       get '/users/received-messages' => 'messages#received_messages'
       get '/gear-types' => "gears#gear_types"
+      get "/profile" => 'user#profile'
     end
   end
  
