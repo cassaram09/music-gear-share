@@ -1,4 +1,4 @@
-function UserController(UserService) {
+function UserController(UserService, $state) {
   vm = this;
   vm.user;
   vm.editUser = editUser;
@@ -18,10 +18,10 @@ function UserController(UserService) {
   }
   
   function editUser(){
-    UserService.updateUser(vm.user);
-    vm.user.current_password = "";
-    vm.user.password_confirmation = "";
-    vm.user.password = "";
+    UserService.updateUser(vm.user)
+    setTimeout(function() {     
+      $state.reload();   
+    }, 2000);
   }
 }
 
