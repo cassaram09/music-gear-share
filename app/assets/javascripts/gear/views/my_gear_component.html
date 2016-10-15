@@ -7,7 +7,7 @@
   <ui-view></ui-view>
 
   <div>
-    <p>Filter your gear</p>
+    <p>Search...</p>
     <input ng-model="ctrl.filter">
   </div>
 
@@ -38,9 +38,10 @@
         </div>
 
         <div class="form-group">
-          <p><label for="gear_type">Rental Fee:</label></p>
-          <select ng-model="ctrl.gears[$index].gear_type">
-            <option>Instrument</option>
+          <p><label for="gear_type">Gear Type:</label></p>
+          <select ng-model="ctrl.gears[$index].gear_type" ng-options="x for x in ctrl.gearTypes">
+            <option value="" selected hidden />
+            {{x.property}}
           </select>
         </div>
 

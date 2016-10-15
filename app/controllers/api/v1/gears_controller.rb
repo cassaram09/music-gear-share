@@ -50,7 +50,7 @@ module Api
       private
 
       def gear_params
-        params.require(:gear).permit(:name, :description, :rental_fee)
+        params.require(:gear).permit(:name, :description, :rental_fee, :gear_type)
       end
 
       def set_gear

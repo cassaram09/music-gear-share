@@ -5,11 +5,13 @@ function MyGearController(GearService, $state, $scope) {
   vm.gears;
   vm.updateGear = updateGear;
   vm.deleteGear = deleteGear;
+  vm.gearTypes = [];
 
   activate();
 
   function activate(){
-    return GetGears().then(SetGears);
+    GearService.getGearTypes().then(setGearTypes);
+    GetGears().then(SetGears);
   }
 
   function GetGears(){
@@ -18,6 +20,15 @@ function MyGearController(GearService, $state, $scope) {
 
   function SetGears(data){
     vm.gears = data;
+  }
+
+  function setGearTypes(data){
+    for (var prop in data) {
+      if (data.hasOwnProperty(prop)) {
+          vm.gearTypes.push(prop);
+      }
+    }
+    return vm.gearTypes;
   }
 
   function updateGear(gear) {
