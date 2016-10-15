@@ -6,6 +6,7 @@ function MyGearController(GearService, $state, $scope) {
   vm.updateGear = updateGear;
   vm.deleteGear = deleteGear;
   vm.gearTypes = [];
+  vm.toggleEdit = toggleEdit;
 
   activate();
 
@@ -20,6 +21,10 @@ function MyGearController(GearService, $state, $scope) {
 
   function SetGears(data){
     vm.gears = data;
+    for ( var i = 0; i < vm.gears.length; i++){
+      vm.gears[i]['show'] = true;
+    }
+    return vm.gears;
   }
 
   function setGearTypes(data){
@@ -34,6 +39,10 @@ function MyGearController(GearService, $state, $scope) {
     GearService.deleteGear(gear);
     $state.reload();
   }
+
+  function toggleEdit(gear) {
+    gear.show = gear.show === false ? true: false;
+  };
 
 }
 
