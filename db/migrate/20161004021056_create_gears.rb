@@ -6,8 +6,8 @@ class CreateGears < ActiveRecord::Migration
       t.string :name
       t.string :description
       t.integer :rental_fee
+      t.integer :gear_type
       t.belongs_to :user
-      t.belongs_to :lease
 
     end
   end

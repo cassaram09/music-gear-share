@@ -22,19 +22,8 @@ ActiveRecord::Schema.define(version: 20161009225344) do
     t.string   "name"
     t.string   "description"
     t.integer  "rental_fee"
+    t.integer  "gear_type"
     t.integer  "user_id"
-    t.integer  "lease_id"
-  end
-
-  create_table "leases", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.date     "checkout"
-    t.date     "checkin"
-    t.boolean  "returned"
-    t.string   "notes"
-    t.integer  "owner_id"
-    t.integer  "renter_id"
   end
 
   create_table "messages", force: :cascade do |t|
@@ -43,15 +32,6 @@ ActiveRecord::Schema.define(version: 20161009225344) do
     t.integer  "recipient_id"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
-  end
-
-  create_table "ratings", force: :cascade do |t|
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.integer  "rating"
-    t.string   "notes"
-    t.integer  "reviewer_id"
-    t.integer  "reviewee_id"
   end
 
   create_table "users", force: :cascade do |t|
