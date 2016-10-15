@@ -38,6 +38,13 @@
         </div>
 
         <div class="form-group">
+          <p><label for="gear_type">Rental Fee:</label></p>
+          <select ng-model="ctrl.gears[$index].gear_type">
+            <option>Instrument</option>
+          </select>
+        </div>
+
+        <div class="form-group">
           <p><label for="rental_fee">Rental Fee:</label></p>
           <input ng-model="ctrl.gears[$index].rental_fee" name="rental_fee" ></input>
         </div>

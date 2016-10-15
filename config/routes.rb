@@ -11,6 +11,7 @@ Rails.application.routes.draw do
       get '/my-gear' => 'gears#my_gear'
       get '/users/sent-messages' => 'messages#sent_messages'
       get '/users/received-messages' => 'messages#received_messages'
+      get '/gear-types' => "gears#gear_types"
     end
   end
  

@@ -40,6 +40,11 @@ module Api
         render json: @gear
       end
 
+      def gear_types
+        @gear_types = Gear.gear_types
+        render json: @gear_types
+      end
+
       ## PRIVATE METHODS
 
       private
