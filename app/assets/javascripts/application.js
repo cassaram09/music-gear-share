@@ -20,7 +20,3 @@
 //= require sweetalert/dist/sweetalert.min
 //= require moment/moment
 //= require_tree .
-
-$('.nav a').click(function () {
-  $('.navbar-collapse').collapse('hide');
-});
