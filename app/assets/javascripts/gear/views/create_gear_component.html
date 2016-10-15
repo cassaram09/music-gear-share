@@ -21,6 +21,14 @@
         </div>
 
         <div class="form-group">
+          <p><label for="gear_type">Gear Type:</label></p>
+          <select ng-model="ctrl.newGear.gear_type" ng-options="x for x in ctrl.gearTypes">
+            <option value="" selected hidden />
+            {{x}}
+          </select>
+        </div>
+
+        <div class="form-group">
           <p><label for="rental_fee">Rental Fee:</label></p>
           <input ng-model="ctrl.newGear.rental_fee" name="rental_fee" ></input>
         </div>

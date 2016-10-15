@@ -22,7 +22,15 @@ function GearService($http){
 
   function getGearTypes() {
     return $http.get('api/v1/gear-types')
-      .then(handleResponse)
+      .then(function(data){
+        var gearTypes = [];
+        for (var prop in data.data) {
+          if (data.data.hasOwnProperty(prop)) {
+            gearTypes.push(prop);
+          }
+        }
+        return gearTypes;
+      })
       .catch(handleError);
   }
 

@@ -1,10 +1,10 @@
-function CreateGearController(GearService, $state, $scope) {
+function CreateGearController(GearService, $state, $scope, gears) {
   vm = this;
   vm.newGear = {};
   vm.createGear = createGear;
+  vm.gearTypes = gears;
 
   function createGear() {
-    debugger
     GearService.createGear(vm.newGear);
     vm.newGear = {};
     sweetAlert('Created!');

@@ -19,7 +19,12 @@ angular
       .state('my-gear.add', {
         url: '/add',
         templateUrl: 'gear/views/create_gear_component.html',
-        controller: 'CreateGearController as ctrl' 
+        controller: 'CreateGearController as ctrl',
+        resolve: {
+          gears: function(GearService){
+            return GearService.getGearTypes();
+          }
+        } 
       })
       .state('profile', {
         url: '/profile',

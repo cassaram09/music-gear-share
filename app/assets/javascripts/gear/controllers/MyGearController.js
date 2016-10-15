@@ -23,12 +23,7 @@ function MyGearController(GearService, $state, $scope) {
   }
 
   function setGearTypes(data){
-    for (var prop in data) {
-      if (data.hasOwnProperty(prop)) {
-          vm.gearTypes.push(prop);
-      }
-    }
-    return vm.gearTypes;
+    return vm.gearTypes = data;
   }
 
   function updateGear(gear) {
