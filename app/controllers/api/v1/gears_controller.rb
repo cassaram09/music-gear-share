@@ -16,9 +16,7 @@ module Api
       def create
         @gear = Gear.new(gear_params)
         @gear.user_id = @user.id
-        if @gear.save
-          render json: @gear
-        end
+        render json: @gear if @gear.save
       end
 
       def show
@@ -30,9 +28,7 @@ module Api
       end
 
       def update
-        if @gear.update(gear_params)
-          render json: @gear
-        end
+        render json: @gear if @gear.update(gear_params)
       end
 
       def destroy
@@ -56,7 +52,6 @@ module Api
       def set_gear
         @gear = Gear.find_by(id: params[:id])
       end
-
     end
   end
 end

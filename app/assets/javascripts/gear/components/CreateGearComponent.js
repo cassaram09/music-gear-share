@@ -1,6 +1,6 @@
 CreateGearComponent = {
   templateUrl: 'gear/views/create_gear_component.html',
-  restrict: 'EA'
+  restrict: 'EA',
 };
 
 angular

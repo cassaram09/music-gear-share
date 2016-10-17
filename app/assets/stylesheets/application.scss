@@ -68,14 +68,14 @@ footer {
   .navbar-brand {
     color: #fff;
   }
-  .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+  .navbar-brand:hover, .navbar-brand:focus, .navbar-brand:active {
     color: #99aaff;
     background-color: transparent;
   }
   .navbar-nav > li > a {
     color: #fff;
   }
-  .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+  .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:active {
     color: #99aaff;
   }
   .navbar-toggle {
