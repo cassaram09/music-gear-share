@@ -37,8 +37,6 @@ gem 'angular-rails-templates'
 
 gem 'bower-rails' 
 
-gem 'rails_12factor', group: :production
-
 gem 'ngannotate-rails'
 
 gem 'bootstrap-sass', '~> 3.3.6'
