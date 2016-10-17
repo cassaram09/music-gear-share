@@ -10,4 +10,5 @@
 @user2 = User.create(username: "djeffy", email: "jeff@jeff.com", password: "hello123")
 
 @gear1 = Gear.create(name: "ibanez guitar", description: "it's a guitar", rental_fee: 0, user_id: 2)
-@gear1 = Gear.create(name: "Tama Swingstar", description: "2007 drum kit", rental_fee: 0, user_id: 1)
+@gear2 = Gear.create(name: "Tama Swingstar", description: "2007 drum kit", rental_fee: 0, user_id: 1)
+@gear1 = Gear.create(name: "Behringer Amp", description: "2005 Behringer Amp, peak 150 watts", rental_fee: 0, user_id: 2)
