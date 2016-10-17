@@ -61,15 +61,22 @@ footer {
   border-radius: 0px;
 }
 
-.navbar-default{
+.navbar-default {
   background-color: #555;
   border-color: #111;
   color: #fff;
   .navbar-brand {
     color: #fff;
   }
+  .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+    color: #99aaff;
+    background-color: transparent;
+  }
   .navbar-nav > li > a {
     color: #fff;
+  }
+  .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #99aaff;
   }
   .navbar-toggle {
     border: 2px solid #fff;
@@ -78,6 +85,9 @@ footer {
       background-color: #fff;
     }
   }
+  .navbar-toggle:hover, .navbar-toggle:focus {
+    background-color: #99aaff;
+    border-color: #99aaff;
+  }
 }
-
 
