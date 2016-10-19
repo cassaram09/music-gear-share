@@ -2,11 +2,16 @@
   <h2>Rent Gear</h2>
 
   <div>
-    <p>Browse the listings, or use the form below to filter...</p>
-    <input ng-model="ctrl.filter">
+    <p>Browse the listings, or use the fields to filter</p>
+    <label>Any</label>
+      <input ng-model="ctrl.filter">
+    <label>Sort by Name</label>
+      <input ng-model="ctrl.filter.name">
+    <label>Sort by Description</label>
+      <input ng-model="ctrl.filter.description">
   </div>
 
-  <div ng-repeat="gear in ctrl.gears | filter: ctrl.filter track by gear.id ">
+  <div ng-repeat="gear in ctrl.gears | filter:ctrl.filter:strict track by gear.id ">
     <div class="line-dark"></div>
     <div>
     <h3 class="gear_title">{{gear.name}}</h3>
