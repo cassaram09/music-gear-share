@@ -1,6 +1,8 @@
 <div>
   <h2>Rent Gear</h2>
 
+  
+
   <div>
     <p>Browse the listings, or use the fields to filter</p>
     <label>Any</label>
@@ -19,6 +21,8 @@
     </div>
     <p>{{gear.description}}</p>
     <p>Rental Fee: {{gear.rental_fee}}</p>
+    <button ng-click="ctrl.count(gear)" value="favorite this">favorite</button>
+    {{gear.favoriteCount}}
   </div>
 
 </div>

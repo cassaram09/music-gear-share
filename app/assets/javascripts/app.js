@@ -4,7 +4,7 @@ angular
     $stateProvider
       .state('home', {
         url: '/',
-        template: '<gear-component gears="ctrl.gears">',
+        template: '<gear-component gears="ctrl.gears" count="ctrl.count">',
         controller: 'GearController as ctrl',
         resolve: {
           gear: function(GearService) {

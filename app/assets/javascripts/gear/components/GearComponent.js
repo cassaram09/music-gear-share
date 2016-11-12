@@ -3,7 +3,8 @@ GearComponent ={
   controllerAs: 'ctrl',
   restrict: 'EA',
   bindings:{
-    gears: "="
+    gears: "=",
+    count: "="
   }
 };
 
