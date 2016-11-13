@@ -28,7 +28,7 @@ angular
       })
       .state('profile', {
         url: '/profile',
-        templateUrl: 'user/user_profile.html',
+        templateUrl: 'user/user_profile.html.erb',
         controller: 'UserController as ctrl'
       })
       .state('messages', {
@@ -54,7 +54,7 @@ angular
           },
         }
       })
-      $locationProvider.html5Mode(true);
+      // $locationProvider.html5Mode(true);
       $urlRouterProvider.otherwise('/');
   })
   .config(function($httpProvider) {
