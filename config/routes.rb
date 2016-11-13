@@ -2,7 +2,7 @@ Rails.application.routes.draw do
     
   devise_for :users, :controllers => { registrations: 'users/registrations' }
 
-  root to: 'home#index'
+  
 
   namespace :api, defaults:{format: :json} do
     namespace :v1 do
@@ -23,5 +23,17 @@ Rails.application.routes.draw do
     get "/signup" => "devise/registrations#new"
     get "/profile" => 'devise/registrations#edit'
   end
-  
+
+  get '/my-gear' => 'home#index'
+
+  scope 'messages' do
+    get '/' => 'home#index'
+    get '/sent' => 'home#index'
+    get '/received' => 'home#index'
+  end
+
+  get "*path" => redirect("/")
+
+  root to: 'home#index'
+
 end

@@ -54,6 +54,7 @@ angular
           },
         }
       })
+      $locationProvider.html5Mode(true);
       $urlRouterProvider.otherwise('/');
   })
   .config(function($httpProvider) {
